@@ -1,22 +1,21 @@
 # Linear-Regression
 Data fitting using linear regression
-Trong đồ án này, sinh viên được yêu cầu thực hiện:
 
-1. Xây dựng mô hình *dự đoán tuổi thọ trung bình* **sử dụng hồi quy tuyến tính** (7 điểm)
+1. Building a model for *predicting average lifespan* **using linear regression**.
 
-- Yêu cầu 1a: Sử dụng toàn bộ 10 đặc trưng đề bài cung cấp (2 điểm)
-	- Huấn luyện 1 lần duy nhất cho 10 đặc trưng trên toàn bộ tập huấn luyện (`train.csv`)
-	- Thể hiện công thức cho mô hình hồi quy (tính $y$ theo 10 đặc trưng trong $X$)
-	- Báo cáo **1 kết quả trên tập kiểm tra (`test.csv`)** cho mô hình vừa huấn luyện được
+- Requirement 1a: Utilize all 10 features provided in the assignment
+	- Train only once for all 10 features on the entire training dataset (`train.csv`)
+	- Express the formula for the linear regression model (predicting $y$ based on 10 features in $X$)
+	- Report **one result on the test set (`test.csv`)** for the trained model
     
-- Yêu cầu 1b: Xây dựng mô hình sử dụng duy nhất 1 đặc trưng, tìm mô hình cho kết quả tốt nhất (2 điểm)
-	- Thử nghiệm trên toàn bộ (10) đặc trưng đề bài cung cấp
-	- Yêu cầu **sử dụng phương pháp 5-fold Cross Validation** để tìm ra đặc trưng tốt nhất
-	- Báo cáo **10 kết quả tương ứng cho 10 mô hình** từ 5-fold Cross Validation (lấy trung bình)
+- Requirement 1b: Construct a model using only 1 feature, find the best-performing model for the optimal outcome
+	- Test on the entire set of provided 10 features
+	- Requirement: Utilize the **5-fold Cross Validation method** to identify the best-performing features.
+	- Report **10 corresponding results for 10 models** from 5-fold Cross Validation (take the average).
 	
 	<center>
 
-	| STT | Mô hình với 1 đặc trưng | RMSE |
+	| NO. | Model with 1 feature    | RMSE |
 	|:---:|:-----------------------:|:----:|
 	|  1  | Adult Mortality         |      |
 	|  2  | BMI                     |      |
@@ -25,40 +24,40 @@ Trong đồ án này, sinh viên được yêu cầu thực hiện:
 
 	</center>
 
-	- Thể hiện công thức cho mô hình hồi quy theo đặc trưng tốt nhất (tính $y$ theo đặc trưng tốt nhất tìm được)
-    - Báo cáo **1 kết quả trên tập kiểm tra (`test.csv`)** cho mô hình tốt nhất tìm được
+	- Express the formula for the linear regression model with the best-performing feature (predicting $y$ based on the identified best feature)
+    	- Report **one result on the test set (test.csv)** for the best-performing model found
 	
-- Yêu cầu 1c: Sinh viên tự xây dựng mô hình, tìm mô hình cho kết quả tốt nhất (3 điểm)
-	- Xây dựng `m` mô hình khác nhau (tối thiểu 3), đồng thời khác mô hình ở 1a và 1b
-		- Mô hình có thể là sự kết hợp của 2 hoặc nhiều đặc trưng
-		- Mô hình có thể sử dụng đặc trưng đã được chuẩn hóa hoặc biến đổi (bình phương, lập phương...)
-		- Mô hình có thể sử dụng đặc trưng được tạo ra từ 2 hoặc nhiều đặc trưng khác nhau (cộng 2 đặc trưng, nhân 2 đặc trưng...)
+- Requirement 1c: Construct a model, seeking the best-performing model for optimal results
+	- Construct `m` different models (at least 3), each distinct from the models in 1a and 1b
+		- Models can be a combination of 2 or more features
+		- Models may use standardized or transformed features (squared, cubed, etc.)
+		- Models can incorporate features generated from 2 or more different features (addition of 2 features, multiplication of 2 features, etc.)
 		- ...
-	- Yêu cầu **sử dụng phương pháp 5-fold Cross Validation** để tìm ra mô hình tốt nhất
-	- Báo cáo **`m` kết quả tương ứng cho `m` mô hình** từ 5-fold Cross Validation (lấy trung bình)
+	- Requirement: **Utilize the 5-fold Cross Validation method** to identify the best-performing model
+	- Report **`m` corresponding results `m` models** based on 5-fold Cross Validation (averaged)
 
 	<center>
 
-	| STT |           Mô hình          | RMSE |
+	| NO. |           Models           | RMSE |
 	|:---:|:--------------------------:|:----:|
-	|  1  | Sử dụng 2 đặc trưng (a, b) |      |
+	|  1  | Using   2 features  (a, b) |      |
 	| ... | ...                        |      |
 	|  m  | ...                        |      |
 
 	</center>
 
-	- Thể hiện công thức cho mô hình hồi quy tốt nhất mà sinh viên tìm được
-	- Báo cáo **1 kết quả trên tập kiểm tra (`test.csv`)** cho mô hình tốt nhất tìm được
+	- Express the formula for the best-performing regression model that the student identified
+	- Report **one result on the test set (test.csv)** for the best-performing model found.
 
-- <ins>Lưu ý:</ins>
-    - Tập `test.csv` chỉ được sử dụng 3 lần như được đề cập bên trên
-    - Kết quả báo cáo là độ đo [RMSE](https://www.sciencedirect.com/topics/engineering/root-mean-squared-error)
+- <ins>NOTE:</ins>
+    - The test.csv dataset is only to be used three times, as mentioned earlier.
+    - The reported result is a measurement [RMSE](https://www.sciencedirect.com/topics/engineering/root-mean-squared-error)
     
 
-2. Báo cáo về kết quả, đánh giá và nhận xét các mô hình đã xây dựng (3 điểm)
-    - Báo cáo cần có thông tin cá nhân (họ và tên, MSSV), số trang và tài liệu tham khảo (cần chỉ định cụ thể tài liệu được sử dụng cho phần nào trong bài làm)
-    - Liệt kê TẤT CẢ thư viện đã sử dụng và lý do sử dụng chúng
-	- Liệt kê TẤT CẢ hàm đã sử dụng và mô tả các hàm đó
-    - Báo cáo và nhận xét kết quả từ TOÀN BỘ các mô hình xây dựng được (có $1 + (10 + 1) + (m + 1)$ kết quả)
-    - Với yêu cầu 1b và 1c: giải thích hoặc nêu giả thuyết cho mô hình đạt kết quả tốt nhất
-	- Với yêu cầu 1c: giải thích lý do vì sao lại trích chọn/thiết kế các đặc trưng cho `m` mô hình
+2. Report on the results, evaluate, and provide comments on the constructed models (3 points)
+    - The report should include personal information (full name, student ID), page count, and references (specifying the documents used for each part of the assignment)
+    - List ALL libraries used and the reasons for their utilization
+    - Enumerate ALL functions used and describe each of them
+    - Report and provide feedback on the results from ALL constructed models (with $1 + (10 + 1) + (m + 1)$ results)
+    - With requirements 1b and 1c: explain or state hypotheses for the model that achieved the best result.
+    - With requirement 1c: explain the reasons for selecting/designing features for the `m` models.
